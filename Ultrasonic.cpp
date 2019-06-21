@@ -11,5 +11,5 @@ float Ultrasonic::get() {
 	delayMicroseconds(10);
 	digitalWrite(this->trigPin, LOW);
 	// Read and return pulse length
-	return pulseIn(this->echoPin, HIGH, 23200) / 58; // 23200 = 4 meter max distance, 58 = convesion to centermeters
+	return pulseIn(this->echoPin, HIGH, 23200) / (float)58; // 23200 = 4 meter max distance, 58 = convesion to centermeters
 }
